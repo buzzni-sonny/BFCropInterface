@@ -60,5 +60,9 @@
 - (id)initWithFrame:(CGRect)frame andImage:(UIImage *)image nodeRadius:(CGFloat)nodeRadius;
 - (UIImage*)getCroppedImage;
 - (void)setCropViewPosition:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
-
+- (void)setShowNodes:(BOOL)showNodes;
+- (void)setBorderWidth:(CGFloat)borderWidth;
+- (void)setBorderColor:(UIColor *)borderColor;
+- (void)setShadowColor:(UIColor *)shadowColor;
+- (void)setCropViewPosition:(CGFloat)x y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height;
 @end
