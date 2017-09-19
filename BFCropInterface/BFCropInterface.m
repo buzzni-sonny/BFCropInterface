@@ -426,6 +426,7 @@
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     scaleDistance = 0;
     currentTouches = [[event allTouches] count];
+    [self.delegate changeCrop: self.cropView.frame];
 }
 
 - (UIImage*)getCroppedImage {

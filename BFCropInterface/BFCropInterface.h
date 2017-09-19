@@ -24,6 +24,9 @@
 
 
 #import <UIKit/UIKit.h>
+@protocol ChangeCrop <NSObject>
+- (void) changeCrop: (CGRect)rect;
+@end
 
 @interface BFCropInterface : UIImageView {
     BOOL isPanning;
@@ -56,6 +59,7 @@
 @property (nonatomic) CGFloat borderWidth;
 @property (nonatomic) BOOL showNodes;
 @property (nonatomic) CGFloat nodeRadius;
+@property (nonatomic, weak) id<ChangeCrop> delegate;
 
 - (id)initWithFrame:(CGRect)frame andImage:(UIImage *)image nodeRadius:(CGFloat)nodeRadius;
 - (UIImage*)getCroppedImage;
